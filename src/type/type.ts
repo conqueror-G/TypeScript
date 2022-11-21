@@ -36,3 +36,21 @@ let e: number = 3 - d;
 // 타입이 명시되지 않으면, 타입추론이 정상적으로 적용되지 않는다.
 let sum: string = 13 - "kim";
 console.log(sum);
+
+let user: string = "kim";
+let age: number | undefined = undefined;
+let married: boolean = false;
+let 철수: (string | number | boolean | undefined)[] = [user, age, married];
+
+let 학교: {
+  score: (number | boolean)[];
+  teacher: string;
+  friend: string | string[];
+} = {
+  score: [100, 97, 84],
+  teacher: "Phil",
+  friend: "John",
+};
+
+학교.score[4] = false;
+학교.friend = ["Lee", 학교.teacher];
